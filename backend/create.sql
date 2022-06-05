@@ -74,6 +74,13 @@ CREATE TABLE IF NOT EXISTS pin (
  FOREIGN KEY (worker_id) REFERENCES worker (worker_id)
 );
 
+CREATE TABLE IF NOT EXISTS users (
+ usersID INT AUTO_INCREMENT PRIMARY KEY,
+ name VARCHAR(20) NOT NULL UNIQUE,
+ password VARCHAR(20) NOT NULL,
+ access VARCHAR(30) NOT NULL
+);
+
 INSERT INTO category (category_name) VALUES ('Фрезерні верстати');
 INSERT INTO category (category_name) VALUES ('Обробка пластику та гуми');
 INSERT INTO category (category_name) VALUES ('Ковально-пресове обладнання');
@@ -155,3 +162,7 @@ INSERT INTO pin (pin_start, pin_end, equip_id, worker_id) VALUES ('2021-08-29', 
  
 INSERT INTO pin (pin_start, pin_end, equip_id, worker_id) VALUES ('2021-08-29', '2021-11-29', 5, 4);
 INSERT INTO pin (pin_start, equip_id, worker_id) VALUES ('2021-12-01', 5, 4);
+
+INSERT INTO users (name, password, access) VALUES ('mxclfld', 'password', 'admin');
+INSERT INTO users (name, password, access) VALUES ('nitrot', '123456', 'worker');
+INSERT INTO users (name, password, access) VALUES ('xerjfx', 'work123', 'worker');

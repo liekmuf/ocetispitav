@@ -1,5 +1,5 @@
-CREATE DATABASE lmao;
-USE lmao;
+CREATE DATABASE Equipment;
+USE Equipment;
  
 CREATE TABLE IF NOT EXISTS category (
  category_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -162,7 +162,10 @@ INSERT INTO pin (pin_start, pin_end, equip_id, worker_id) VALUES ('2021-08-29', 
  
 INSERT INTO pin (pin_start, pin_end, equip_id, worker_id) VALUES ('2021-08-29', '2021-11-29', 5, 4);
 INSERT INTO pin (pin_start, equip_id, worker_id) VALUES ('2021-12-01', 5, 4);
+<<<<<<< HEAD
 
 INSERT INTO users (name, password, access) VALUES ('mxclfld', 'password', 'admin');
 INSERT INTO users (name, password, access) VALUES ('nitrot', '123456', 'worker');
 INSERT INTO users (name, password, access) VALUES ('xerjfx', 'work123', 'worker');
+=======
+>>>>>>> b80dbb725629c4079722cf3146b7422f96d73f93

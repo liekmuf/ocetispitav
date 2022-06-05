@@ -17,6 +17,7 @@ const supplier = require('./routes/api/supplier')
 const equipment = require('./routes/api/equipment')
 const pin = require('./routes/api/pin')
 const users = require('./routes/api/users')
+const queries = require('./routes/api/queries')
 // const journal = require('./routes/api/journal')
 
 const PORT = process.env.PORT || 3000
@@ -35,6 +36,7 @@ app.use('/supplier', supplier)
 app.use('/equipment', equipment)
 app.use('/pin', pin)
 app.use('/users', users)
+app.use('/queries', queries)
 // app.use('/journal', journal)
 
 app.get('*', (req, res) => {

@@ -31,31 +31,6 @@ const getAllContracts = async (req, res) => {
     response.push(contracts)
     res.json(response)
   })
-
-  // let findWorker = async (worker_id) => {
-  //   const worker = await query(
-  //     `SELECT * FROM worker WHERE worker_id = ${worker_id}`
-  //   )
-  //   return worker[0].worker_name
-  // }
-  // connection.query(sql, async (err, result) => {
-  //   if (err) return res.sendStatus(500)
-  //   const contracts = JSON.parse(JSON.stringify(result))
-
-  //   const response = contracts.map(async (contract) => {
-  //     const worker = await findWorker(contract?.worker_id)
-  //     const object = {
-  //       contract_id: contract.contract_id,
-  //       contract_date: contract.contract_date,
-  //       expire_date: contract.expire_date,
-  //       responsibility: contract.responsibility,
-  //       worker: worker,
-  //     }
-  //     return object
-  //   })
-  //   const array = await Promise.all(response.map((obj) => obj))
-  //   res.json(array)
-  // })
 }
 
 const createNewContract = async (req, res) => {

@@ -1,5 +1,5 @@
-CREATE DATABASE lmao;
-USE lmao;
+CREATE DATABASE Equipment;
+USE Equipment;
  
 CREATE TABLE IF NOT EXISTS category (
  category_id INT AUTO_INCREMENT PRIMARY KEY,
